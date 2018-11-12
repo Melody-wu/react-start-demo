@@ -5,9 +5,9 @@ import configureStore from './store/configureStore'
 
 import './static/css/common.less'
 
-// 引用并执行 redux-demo
-// import fn from './redux-demo.js'
-// fn()
+//引用并执行 redux-demo
+import fn from './redux-demo.js'
+fn()
 
 import Hello from './containers/Hello'
 

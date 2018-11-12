@@ -18,7 +18,7 @@ class Hello extends React.Component {
                 <hr/>
                 <B userinfo={this.props.userinfo}/>
                 <hr/>
-                <C actions={this.props.userinfoActions}/>
+                {/*<C actions={this.props.userinfoActions}>*/}
             </div>
         )
     }
@@ -36,16 +36,17 @@ class Hello extends React.Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state)
     return {
         userinfo:state.userinfo
     }
 }
 
 function mapDispatchToProps(dispatch) {
+    console.log(userinfoActions)
     return {
         userinfoActions: bindActionCreators(userinfoActions, dispatch)
     }
+
 }
 
 export default connect(
