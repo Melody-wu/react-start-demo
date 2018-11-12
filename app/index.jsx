@@ -1,12 +1,21 @@
 import React from 'react'
 import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import configureStore from './store/configureStore'
 
-// 通用样式
 import './static/css/common.less'
 
-import Hello from './containers/Hello/';
+// 引用并执行 redux-demo
+// import fn from './redux-demo.js'
+// fn()
+
+import Hello from './containers/Hello'
+
+const store = configureStore()
 
 render(
-    <Hello/>,
+    <Provider store={store}>
+        <Hello/>
+    </Provider>,
     document.getElementById('root')
 )
