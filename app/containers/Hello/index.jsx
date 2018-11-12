@@ -16,7 +16,7 @@ class Hello extends React.Component {
         return (
             <div>
                 <Header title="hello页面"/>
-                <p onClick={this.clickHandler.bind(this)}>hello world {this.state.now}</p>
+                <p onClick={this.handleClick.bind(this)}>hello world {this.state.now}</p>
                 <hr/>
                 <Carousel/>
                 <Recommend/>
@@ -24,7 +24,7 @@ class Hello extends React.Component {
             </div>
         )
     }
-    clickHandler() {
+    handleClick() {
         this.setState({
             now: Date.now()
         })
