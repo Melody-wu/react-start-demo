@@ -24,6 +24,10 @@ class Hello extends React.Component {
     }
     componentDidMount() {
         // 模拟登陆
+        // console.log(this.props.userinfoActions.login({
+        //     userid: 'abc',
+        //     city: 'beijing'
+        // }))
         this.props.userinfoActions.login({
             userid: 'abc',
             city: 'beijing'
@@ -32,8 +36,9 @@ class Hello extends React.Component {
 }
 
 function mapStateToProps(state) {
+    console.log(state)
     return {
-        userinfo: state.userinfo
+        userinfo:state.userinfo
     }
 }
 
