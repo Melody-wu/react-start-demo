@@ -6,10 +6,3 @@ export function login(data) {
         data
     }
 }
-
-export function updateCityName(data) {
-    return {
-        type: actionTypes.UPDATE_CITYNAME,
-        data
-    }
-}
