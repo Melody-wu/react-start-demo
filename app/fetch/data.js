@@ -24,8 +24,8 @@ export function getData() {
 export function postData() {
     // '/api/post' 提交数据
     var result = post('/api/post', {
-        a: 100,
-        b: 200
+        "a": 100,
+        "b": 200
     })
 
     result.then(res => {

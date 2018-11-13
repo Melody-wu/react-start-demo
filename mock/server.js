@@ -18,10 +18,15 @@ router.get('/api/2', function *(next) {
         b: '123'
     }
 });
-
+// router.post('/api/post', async (ctx, next) => {
+//     console.log(ctx);
+// });
 router.post('/api/post', koaBody, function *(next) {
     console.log(this.request.body)
-    this.body = JSON.stringify(this.request.body)
+    console.log(this)
+     console.log("------------")
+    console.log(next)
+     this.body=JSON.stringify(this.request.body);
 });
 
 app.use(router.routes())
